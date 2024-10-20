@@ -3,39 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parag Gupta | Dynamic Webpage</title>
+    <title>Parag Gupta | Dynamic Background Video</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 id="name">Parag Gupta</h1>
-        <nav>
-            <ul>
-                <li><a href="#videos">Videos</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#logos">Logos</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Fullscreen background video -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-    <section id="videos">
-        <h2>Dynamic Videos</h2>
-        <div class="video-container" id="video-section">
-            <!-- Videos will be dynamically added here -->
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Parag Gupta, a passionate developer and creative individual who loves to explore web design and dynamic content.</p>
-    </section>
-
-    <section id="logos">
-        <h2>Dynamic Logos</h2>
-        <div class="logo-container" id="logo-section">
-            <!-- Logos will be dynamically added here -->
-        </div>
-    </section>
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <h1>Parag Gupta</h1>
+        <p>Welcome to my dynamic webpage</p>
+    </div>
 
     <footer>
         <p>&copy; 2024 Parag Gupta</p>
