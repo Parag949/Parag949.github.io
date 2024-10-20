@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parag Gupta | Dynamic Background Video</title>
+    <title>Parag Gupta | Projects</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,8 +18,39 @@
     <!-- Overlay content -->
     <div class="overlay-content">
         <h1>Parag Gupta</h1>
-        <p>Welcome to my dynamic webpage</p>
+        <p>Welcome to my webpage</p>
+
+        <!-- Tabs for Projects -->
+        <div class="tab-container">
+            <button class="tab-btn" onclick="openTab(event, 'software')">Software Projects</button>
+            <button class="tab-btn" onclick="openTab(event, 'hardware')">Hardware Projects</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="software" class="tab-content">
+            <h2>Software Projects</h2>
+            <ul>
+                <li>Project 1: Web Application</li>
+                <li>Project 2: Mobile App Development</li>
+                <li>Project 3: Data Visualization Tool</li>
+            </ul>
+        </div>
+
+        <div id="hardware" class="tab-content">
+            <h2>Hardware Projects</h2>
+            <ul>
+                <li>Project 1: IoT Device</li>
+                <li>Project 2: Robotics System</li>
+                <li>Project 3: Home Automation Setup</li>
+            </ul>
+        </div>
     </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>Hello! I'm Parag Gupta, a passionate software and hardware enthusiast with a deep love for creating innovative solutions in both domains. I enjoy building applications and systems that solve real-world problems. Feel free to explore my projects in software and hardware.</p>
+    </section>
 
     <footer>
         <p>&copy; 2024 Parag Gupta</p>
