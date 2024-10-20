@@ -15,36 +15,73 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; /* Push video to the background */
+    z-index: -1;
 }
 
 #bg-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the screen without distortion */
+    object-fit: cover;
 }
 
 /* Overlay content on top of the video */
 .overlay-content {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%);
     text-align: center;
     color: white;
-    z-index: 1; /* Make sure the content stays above the video */
+    z-index: 1;
 }
 
-.overlay-content h1 {
-    font-size: 4rem;
-    margin: 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+/* Tab buttons */
+.tab-container {
+    margin-top: 30px;
 }
 
-.overlay-content p {
-    font-size: 1.5rem;
+.tab-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.tab-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tab content */
+.tab-content {
+    display: none;
     margin-top: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 8px;
+}
+
+/* Display active tab */
+.tab-content.active {
+    display: block;
+}
+
+/* About Section */
+.about-section {
+    background-color: white;
+    color: #333;
+    padding: 50px;
+    position: relative;
+    top: 300px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer styling */
