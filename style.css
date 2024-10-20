@@ -1,9 +1,13 @@
-/* General styling */
-body, html {
+/* General Reset and Styling */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
     overflow: hidden;
 }
 
@@ -14,8 +18,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    z-index: -1;
+    z-index: -2;
 }
 
 #bg-video {
@@ -24,90 +27,91 @@ body, html {
     object-fit: cover;
 }
 
-/* Overlay content on top of the video */
+/* Dark overlay to make content stand out */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Centered overlay content */
 .overlay-content {
-    position: absolute;
-    top: 30%;
+    position: relative;
+    top: 25%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -25%);
     text-align: center;
     color: white;
-    z-index: 1;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
-    border-radius: 10px;
 }
 
-/* Main Title Styling */
 .overlay-content h1 {
     font-size: 4rem;
-    margin: 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Enhanced text shadow */
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-/* Welcome Message */
 .overlay-content p {
     font-size: 1.5rem;
-    margin-top: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
 }
 
-/* Tab Container */
+/* Navigation Tabs */
 .tab-container {
-    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .tab-btn {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
+    background-color: transparent;
     color: white;
-    padding: 15px 30px; /* Increased padding */
-    margin: 5px;
+    border: 2px solid white;
+    padding: 12px 24px;
+    margin: 0 10px;
     cursor: pointer;
     font-size: 1.2rem;
-    transition: background-color 0.3s, transform 0.3s;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
-.tab-btn:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: scale(1.05); /* Slight zoom effect */
+.tab-btn:hover, .tab-btn.active {
+    background-color: white;
+    color: #333;
 }
 
-/* Tab content */
+/* Tab Content Styling */
 .tab-content {
     display: none;
-    margin-top: 20px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Darker background for tab content */
-    color: white;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-/* Display active tab */
-.tab-content.active {
-    display: block;
+.tab-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.tab-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tab-content li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 /* About Section */
-.about-section {
-    background-color: white;
-    color: #333;
-    padding: 40px; /* Adjusted padding */
-    position: relative;
-    top: 300px;
-    margin: 30px auto;
-    max-width: 800px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* About Section Heading */
-.about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* Footer styling */
@@ -117,6 +121,6 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    z-index: 1;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
