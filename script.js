@@ -1,3 +1,11 @@
+// Hamburger toggle for mobile view
+const hamburgerIcon = document.getElementById("hamburger-icon");
+const navTabs = document.getElementById("nav-tabs");
+
+hamburgerIcon.addEventListener("click", function() {
+    navTabs.classList.toggle("show");
+});
+
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 
@@ -13,12 +21,4 @@ function openTab(evt, tabName) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Show current tab content and add "active" class to clicked button
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Open Software tab by default
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector(".tab-btn").click();
-});
+    // Show current tab content and
