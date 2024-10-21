@@ -171,4 +171,10 @@ footer {
     .tab-btn {
         margin: 10px 0;
     }
+
+    .tab-container.show {
+        display: flex; /* Show tabs when hamburger is clicked */
+        flex-direction: column;
+        align-items: center;
+    }
 }
