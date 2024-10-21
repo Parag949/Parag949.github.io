@@ -74,6 +74,12 @@ body, html {
     font-size: 1.2rem;
     border-radius: 30px;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tab-btn i {
+    margin-right: 10px;
 }
 
 .tab-btn:hover, .tab-btn.active {
@@ -98,6 +104,10 @@ body, html {
     margin-bottom: 15px;
 }
 
+.tab-content h2 i {
+    margin-right: 10px;
+}
+
 .tab-content ul {
     list-style-type: none;
     padding-left: 0;
@@ -106,6 +116,12 @@ body, html {
 .tab-content li {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.tab-content li i {
+    margin-right: 10px;
 }
 
 /* About Section */
