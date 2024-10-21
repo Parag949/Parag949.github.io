@@ -38,6 +38,20 @@ body, html {
     z-index: -1;
 }
 
+/* Hamburger menu (visible on mobile only) */
+.hamburger-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none; /* Hidden on desktop */
+}
+
+.hamburger-container i {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
 /* Centered overlay content */
 .overlay-content {
     position: relative;
@@ -62,6 +76,8 @@ body, html {
 /* Navigation Tabs */
 .tab-container {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .tab-btn {
@@ -139,4 +155,20 @@ footer {
     color: white;
     font-size: 0.9rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .tab-container {
+        display: none; /* Hide tabs in mobile view */
+        flex-direction: column;
+    }
+
+    .hamburger-container {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .tab-btn {
+        margin: 10px 0;
+    }
 }
