@@ -22,13 +22,18 @@
     <!-- Dark overlay for better contrast -->
     <div class="overlay"></div>
 
+    <!-- Hamburger Menu Icon (visible on mobile only) -->
+    <div class="hamburger-container">
+        <i class="fas fa-bars" id="hamburger-icon"></i>
+    </div>
+
     <!-- Overlay content -->
     <div class="overlay-content">
         <h1>Parag Gupta</h1>
         <p>Innovative Software & Hardware Solutions</p>
 
-        <!-- Navigation Tabs with Icons -->
-        <div class="tab-container">
+        <!-- Navigation Tabs (horizontal on desktop, hamburger menu on mobile) -->
+        <div class="tab-container" id="nav-tabs">
             <button class="tab-btn" onclick="openTab(event, 'software')">
                 <i class="fas fa-laptop-code"></i> Software Projects
             </button>
