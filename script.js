@@ -1,9 +1,15 @@
-// Hamburger toggle for mobile view
+// Hamburger toggle for mobile view with animation
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const navTabs = document.getElementById("nav-tabs");
 
 hamburgerIcon.addEventListener("click", function() {
-    navTabs.classList.toggle("show");
+    if (navTabs.classList.contains("show")) {
+        navTabs.classList.remove("show");
+        navTabs.classList.add("hide");
+    } else {
+        navTabs.classList.remove("hide");
+        navTabs.classList.add("show");
+    }
 });
 
 function openTab(evt, tabName) {
