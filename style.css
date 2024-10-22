@@ -8,7 +8,7 @@
 body, html {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+    overflow-y: auto; /* Allow vertical scrolling */
 }
 
 /* Fullscreen video background */
@@ -171,8 +171,13 @@ footer {
         display: block;
     }
 
-    .tab-container {
+    .tab-container.show {
+        display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .tab-container {
+        display: none;
     }
 }
