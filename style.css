@@ -80,12 +80,22 @@ body, html {
     justify-content: center;
     flex-wrap: wrap;
 }
+
 /* Add this to ensure proper display when the show class is toggled */
 .tab-container.show {
     display: flex !important; /* Ensure it overrides other styles */
     flex-direction: column;
     align-items: center;
+    animation: slideIn 0.5s forwards; /* Slide in animation */
 }
+
+.tab-container.hide {
+    display: flex !important; /* Ensure it overrides other styles */
+    flex-direction: column;
+    align-items: center;
+    animation: slideOut 0.5s forwards; /* Slide out animation */
+}
+
 .tab-btn {
     background-color: transparent;
     color: white;
@@ -184,5 +194,24 @@ footer {
 
     .tab-container {
         display: none;
+    }
+}
+
+/* Animation for sliding tabs */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
