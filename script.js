@@ -10,7 +10,7 @@ function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 
     // Hide all tab content
-    tabcontent = document.getElementsByClassName("tab-content");
+    tabcontent = document.getElementsByClassName("tab-container");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
