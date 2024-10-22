@@ -78,6 +78,7 @@ body, html {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .tab-btn {
@@ -85,7 +86,7 @@ body, html {
     color: white;
     border: 2px solid white;
     padding: 12px 24px;
-    margin: 0 10px;
+    margin: 10px;
     cursor: pointer;
     font-size: 1.2rem;
     border-radius: 30px;
@@ -153,4 +154,25 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 0.9rem
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overlay-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .overlay-content p {
+        font-size: 1.2rem;
+    }
+
+    .hamburger-container {
+        display: block;
+    }
+
+    .tab-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
