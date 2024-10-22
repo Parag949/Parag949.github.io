@@ -21,4 +21,4 @@ function openTab(evt, tabName) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Show the current tab and mark the button as active
+    // Show
